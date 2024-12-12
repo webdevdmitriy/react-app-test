@@ -31,7 +31,8 @@ export default [
       'react/jsx-no-target-blank': 'off',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       quotes: ['error', 'single'],
-      'comma-dangle': ['error', 'never']
+      'comma-dangle': ['error', 'never'],
+      'react/prop-types': 'off'
     }
   }
 ]
