@@ -1,16 +1,9 @@
-import { useState } from 'react'
-import './Button.css'
+import './Button.css';
 
-function Button({ text }) {
-  const clicked = () => {
-    console.log('clicked')
-  }
-
-  return (
-    <button onClick={clicked} className="button accent">
-      {text}
-    </button>
-  )
+function Button({ text, onClick }) {
+	return (
+		<button className='button accent' onClick={onClick}>{text}</button>
+	);
 }
 
-export default Button
+export default Button;

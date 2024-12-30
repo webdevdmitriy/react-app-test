@@ -1,28 +1,30 @@
-import CardButton from '../CardButton/CardButton.jsx'
-import JournalItem from '../JournalItem/JournalItem.jsx'
-import './JournalList.css'
+import './JournalList.css';
+import CardButton from '../CardButton/CardButton';
+import JournalItem from '../JournalItem/JournalItem';
 
 function JournalList({ items }) {
-  if (items.length === 0) {
-    return <p>Записей нет, добавьте первую</p>
-  }
-  const sortItems = (a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  }
+	if (items.length === 0) {
+		return <p>Записей пока нет, добавьте первую</p>;
+	}
+	const sortItems = (a, b) => {
+		if (a.date < b.date) {
+			return 1;
+		} else {
+			return -1;
+		}
+	};
 
-  return (
-    <div className="journal-list">
-      {items.sort(sortItems).map(item => (
-        <CardButton key={item.id}>
-          <JournalItem title={item.title} date={item.date} text={item.text} />
-        </CardButton>
-      ))}
-    </div>
-  )
+	return	<>
+		{items.sort(sortItems).map(el => (
+			<CardButton key={el.id}>
+				<JournalItem 
+					title={el.title}
+					text={el.text}
+					date={el.date}
+				/>
+			</CardButton>
+		))}
+	</>;
 }
 
-export default JournalList
+export default JournalList;

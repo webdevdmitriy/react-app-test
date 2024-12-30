@@ -1,12 +1,11 @@
+import './LeftPanel.css';
 
-import './LeftPanel.css'
-
-function LeftPanel({children}) {
-    return (
-        <div className="left-panel">
-            {children}
-        </div>
-    )
+function LeftPanel({ children }) {
+	return (
+		<div className='left-panel'>
+			{children}
+		</div>
+	);
 }
 
-export default LeftPanel
+export default LeftPanel;
